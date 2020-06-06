@@ -1,18 +1,23 @@
-# hackathon
-if npm install give any issues then run  npm cache clean --force
-then run npm install
+### Requirements
 
-then npm run-script start
+- Experience with Java, Basic JavaScript and Spring Framework. 
+- Chrome browser,Chrome Restlet Client Plugin and Chrome React DevTools Plugin installed
 
-Change the ports in spring boot microservice, if you choose to change the react port.
+## Spring Boot Microservices
 
-Run spring boot app with mvn spring-boot:run goal
+Microservice architectures are the ‘new normal’.
+Building small, self-contained, ready to run applications can bring great flexibility and added resilience to code.
+Spring Boot’s many purpose-built features make it easy to build and run microservices in production at scale.
 
-If you are changing the spring boot port then change the same in react app.
+## Our Application URI's in local
 
-
-Command to explicitly list and kill the port,if you face issue :
-
-netstat -ao | find "8086" - list pid 
-
-Taskkill /PID  20712 /F - kill the above process id
+http://localhost:8086/login/user
+http://localhost:8086/login/agen
+http://localhost:8086/uploadCertificate
+http://localhost:8086/downloadCertificate/{hireById}
+http://localhost:8086/helpers/add
+http://localhost:8086/helpers/add/register/agent
+http://localhost:8086/helpers/searchByCategory
+http://localhost:8086/helpers/health
+http://localhost:8086/health/add
+http://localhost:8086/helpers/add/register/use
