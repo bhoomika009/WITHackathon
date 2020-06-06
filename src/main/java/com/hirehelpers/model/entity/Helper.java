@@ -3,6 +3,7 @@ package com.hirehelpers.model.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -14,8 +15,8 @@ import javax.validation.constraints.Size;
 public class Helper {
 
 	@Id
-	@GeneratedValue
-	private int id;   
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	private String fname;
 	private String lname;
@@ -42,7 +43,7 @@ public class Helper {
 	/*@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "health_id", referencedColumnName = "id")
 	private HealthMonitor healthMonitor;*/
-	
+
 	public Helper() {
 		super();
 	}
@@ -150,7 +151,7 @@ public class Helper {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	
+
 	/*public HealthMonitor getHealthMonitor() {
 		return healthMonitor;
 	}
@@ -182,7 +183,7 @@ public class Helper {
 		if (id != other.id) {
 			return false;
 		}
-		
+
 		return true;
 	}
 
