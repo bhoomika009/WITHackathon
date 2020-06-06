@@ -10,7 +10,7 @@ public class CorsConfiguration implements WebMvcConfigurer {
 	    @Override
 	    public void addCorsMappings(CorsRegistry registry) {
 	        registry.addMapping("/**")
-	                .allowedOrigins("http://localhost:3002","https://helper-application.azurewebsites.net").allowedMethods("*");
+	                .allowedOrigins("http://localhost:3002","https://helper-application.azurewebsites.net","http://coding-clan-react-application.mybluemix.net").allowedMethods("*");
 	                
 	    }
 
